@@ -1,7 +1,5 @@
 import numpy as np
 from get_sudoku_matrix import get_matrix
-import time
-
 
 def feasible(matrix, x,y,n):
     # checks if the value is feasible to assign to the current cell or not 
@@ -39,45 +37,8 @@ def backtrack(matrix):
     print (matrix)
 
 def sudoku_main_backtrack(matrix):
-
-    '''
-    matrix = np.array([
-        [8, 5, 0, 0, 0, 2, 4, 0, 0],
-        [7, 2, 0, 0, 0, 0, 0, 0, 9],
-        [0, 0, 4, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 1, 0, 7, 0, 0, 2],
-        [3, 0, 5, 0, 0, 0, 9, 0, 0],
-        [0, 4, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 8, 0, 0, 7, 0],
-        [0, 1, 7, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 3, 6, 0, 4, 0]
-    ])'''
-    '''matrix = np.array([
-        [5, 3, 0, 0, 7, 0, 0, 0, 0],
-        [6, 0, 0, 1, 9, 5, 0, 0, 0],
-        [0, 9, 8, 0, 0, 0, 0, 6, 0],
-        [8, 0, 0, 0, 6, 0, 0, 0, 3],
-        [4, 0, 0, 8, 0, 3, 0, 0, 1],
-        [7, 0, 0, 0, 2, 0, 0, 0, 6],
-        [0, 6, 0, 0, 0, 0, 2, 8, 0],
-        [0, 0, 0, 4, 1, 9, 0, 0, 5],
-        [0, 0, 0, 0, 8, 0, 0, 7, 9]
-    ])'''
-    '''matrix = np.array([[0, 0, 0, 0, 0, 9, 0, 7, 0],
-    [7, 0, 6, 0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 4, 0, 0, 5, 0, 0],
-    [0, 0, 0, 0, 0, 6, 2, 0, 0],
-    [6, 0, 7, 0, 0, 0, 0, 0, 4],
-    [5, 0, 0, 0, 2, 0, 0, 0, 3],
-    [0, 4, 0, 3, 5, 0, 1, 0, 0],
-    [0, 0, 9, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 8, 0, 0]])'''
-
-    start_time = time.time()
     backtrack(matrix)
-    end_time = time.time()
-
-    #print(f"Backtracking solver took {end_time - start_time:.6f} seconds")
+    
     
 
                     
