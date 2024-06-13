@@ -1,6 +1,5 @@
 import numpy as np
 from get_sudoku_matrix import get_matrix
-import time
 
 def solve_sudoku(matrix):
     variables, domains, constraints = convert_to_csp(matrix) # function call to convert given problem into CSP 
@@ -124,45 +123,8 @@ def print_board(board):
 
 def sudoku_main_cpa(matrix):
     board = matrix.tolist()
-    '''
-    board = [
-        [8, 5, 0, 0, 0, 2, 4, 0, 0],
-        [7, 2, 0, 0, 0, 0, 0, 0, 9],
-        [0, 0, 4, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 1, 0, 7, 0, 0, 2],
-        [3, 0, 5, 0, 0, 0, 9, 0, 0],
-        [0, 4, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 8, 0, 0, 7, 0],
-        [0, 1, 7, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 3, 6, 0, 4, 0]
-    ]
-    '''
-    '''board = [
-        [5, 3, 0, 0, 7, 0, 0, 0, 0],
-        [6, 0, 0, 1, 9, 5, 0, 0, 0],
-        [0, 9, 8, 0, 0, 0, 0, 6, 0],
-        [8, 0, 0, 0, 6, 0, 0, 0, 3],
-        [4, 0, 0, 8, 0, 3, 0, 0, 1],
-        [7, 0, 0, 0, 2, 0, 0, 0, 6],
-        [0, 6, 0, 0, 0, 0, 2, 8, 0],
-        [0, 0, 0, 4, 1, 9, 0, 0, 5],
-        [0, 0, 0, 0, 8, 0, 0, 7, 9]
-    ]'''
-    '''board = [[0, 0, 0, 0, 0, 9, 0, 7, 0],
-    [7, 0, 6, 0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 4, 0, 0, 5, 0, 0],
-    [0, 0, 0, 0, 0, 6, 2, 0, 0],
-    [6, 0, 7, 0, 0, 0, 0, 0, 4],
-    [5, 0, 0, 0, 2, 0, 0, 0, 3],
-    [0, 4, 0, 3, 5, 0, 1, 0, 0],
-    [0, 0, 9, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 8, 0, 0]]'''
-
-    start_time = time.time()
     solution = solve_sudoku(board)
-    end_time = time.time()
-    #print(f"CSP-based solver took {end_time - start_time:.6f} seconds")
-
+    
     # print solution 
     if solution:
         for (i, j), value in solution.items():
