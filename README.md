@@ -5,6 +5,9 @@ This repository presents a comprehensive solution for resolving Sudoku puzzles u
 
 ## Features
 * Image Processing: Extracts individual cells from the given sudoku image.
+  
 * Digit Recognition: Uses a CNN model to recognize digits from processed cell images.
+  
 * Solving techniques: Includes simple backtracking, CPA, DLX or optimized DLX algorithm.
+  
 * Efficient Execution: Optimized DLX algorithm avoids the creation of binary matrix for faster operation.
