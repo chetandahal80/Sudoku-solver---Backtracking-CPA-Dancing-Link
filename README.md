@@ -66,5 +66,29 @@ Enhances the standard DLX by directly creating Dancing Links without an intermed
 
 * sudoku_solver_dlx_optimized.py: Implements the optimized DLX algorithm without binary matrix creation.
 
+## Performance 
+### Solving Algorithm
+The system's performance varies based on the chosen solving technique. Below are some examples for solving a standard Sudoku puzzle:
 
+(20 clues sudoku grid)
+* Time taken by dlx optimized = 0.026834 sec
+  
+* Time taken by dlx = 0.301 sec
+  
+* Time taken by cpa = 37.6319 sec
+  
+* Time taken by simple backtracking = 124.8206 sec
 
+(30 clues sudoku grid)
+* Time taken by dlx optimized = 0.138433 sec
+  
+* Time taken by dlx = 0.23664 sec
+  
+* Time taken by cpa = 0.792054 sec
+  
+* Time taken by simple backtracking = 0.428469 sec
+
+(Note: The actual performance may vary based on the input puzzle's complexity and the system's hardware specifications.)
+
+### CNN architecture 
+The CNN model showed an accuracy of over 99% on the test set, ensuring high reliability in recognizing digits from the Sudoku grid. However, if the font size in the sudoku image is small, it misses some of the digits as the aspect ratio of the digit's bounding rectangle goes below the threshold while extracting and centralizing the digit as the pre-processing step. 
