@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append("c:\python38\lib\site-packages")
+#sys.path.append("c:\python38\lib\site-packages")
 import os
 import cv2
 import numpy as np
